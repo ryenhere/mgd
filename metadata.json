@@ -1,0 +1,7 @@
+{
+  "name": "Media Madrasah",
+  "description": "Rumah digital majalah cetak karya santri MA Plus Abu Hurairah. Media dakwah pemuda melalui tulisan yang terbit setiap semester.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

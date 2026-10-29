@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Luxurious Red Palette Tokens */
+    --color-deep-red: #660810;
+    --color-deep-red-hover: #50060C;
+    --color-deep-red-subtle: #F6ECEC;
+    --color-stone: #F1EBEB;
+    --color-stone-card: #FFFFFF;
+    --color-stone-darker: #E8E0E0;
+    --color-dark-red: #270707;
+    --color-dark-red-muted: #5D4B4B;
+    --color-grey-orange: #D6C0B1;
+    --color-grey-orange-hover: #C7AE9E;
+    --color-border-warm: #E2D7D0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-stone);
+    color: var(--color-dark-red);
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Restrained animations respecting prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle print/editorial grain or border accents */
+.editorial-border {
+  border-color: #D6C0B1;
+}
+
+.editorial-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #D6C0B1 25%, #D6C0B1 75%, transparent 100%);
+}
+
+.react-pdf__Page {
+  max-width: 100%;
+}
+
+.react-pdf__Page canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}

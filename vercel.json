@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/home", "destination": "/index.html" },
+    { "source": "/majalah", "destination": "/index.html" },
+    { "source": "/majalah/:slug", "destination": "/index.html" },
+    { "source": "/tentang", "destination": "/index.html" },
+    { "source": "/admin", "destination": "/index.html" },
+    { "source": "/admin/dashboard", "destination": "/index.html" }
+  ]
+}
